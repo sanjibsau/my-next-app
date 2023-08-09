@@ -17,8 +17,8 @@ import nodemailer from 'nodemailer';
   
   auth: {
     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: 'sanjibsau79@gmail.com',
-    pass: 'dfwnvulpksamvnsq'
+    user: 'email',
+    pass: 'password'
   }
 
 });
@@ -32,9 +32,9 @@ export default function handler(req, res) {
 
     // Construct the email message
     const mailOptions = {
-      from: '"Anagram Media Labs 👻" <sanjibsau79@gmail.com>', // sender address
-      to: "sanjib@anagrammedia.tech", // list of receivers
-      subject: 'New Contact Form Submission ✔',
+      from: '" " <>', // sender address
+      to: "", // list of receivers
+      subject: 'Subject ',
     
       html: `<html>
       <head>
@@ -61,7 +61,7 @@ export default function handler(req, res) {
       <body class="bg_color">
           <div class="container">
             <img src="${process.env.NEXT_PUBLIC_BASE_URL}/img/logo.png" alt="Logo" class="logo_img" />
-          <h1 class="brand_name">Anagram Media Labs</h1>
+          <h1 class="brand_name">Brand Name</h1>
 
          
           <p style="color:#fff;text-align:center;">Name: ${name} <br/>
